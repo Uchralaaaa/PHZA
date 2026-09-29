@@ -1,0 +1,33 @@
+@startuml
+
+class Person {
+  name
+  age
+  introduce()
+  getRole()
+}
+
+class Student {
+  studentId
+  enroll()
+  getCourses()
+}
+
+class Teacher {
+  subject
+  teach()
+}
+
+class Course {
+  name
+  teacher
+  enrollStudent()
+  assignGrade()
+  calculateAverage()
+}
+
+Person <|-- Student
+Person <|-- Teacher
+Course "1" o-- "*" Student
+
+@enduml

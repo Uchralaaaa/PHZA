@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Student_1 = require("./models/Student");
+const Teacher_1 = require("./models/Teacher");
+const Course_1 = require("./models/Course");
+const student1 = new Student_1.Student("Бат", 20, "S123");
+const student2 = new Student_1.Student("Сараа", 21, "S124");
+const teacher1 = new Teacher_1.Teacher("Мөнх", 35, "Математик");
+const mathCourse = new Course_1.Course("Математик", teacher1.name);
+mathCourse.enrollStudent(student1);
+mathCourse.enrollStudent(student2);
+mathCourse.assignGrade(student1, 95);
+mathCourse.assignGrade(student2, 90);
+console.log(`${mathCourse.name} хичээлийн үнэлгээ:`);
+mathCourse.getStudentGrades().forEach((grade, student) => {
+    console.log(`${student.name}: ${grade} оноо`);
+});
+console.log("Дундаж:", mathCourse.calculateAverage());
+console.log(teacher1.teach());
+console.log(student1.getRole(), teacher1.getRole());

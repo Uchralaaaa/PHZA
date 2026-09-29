@@ -1,0 +1,35 @@
+✅ Composition (амьдралын мөчлөг хамт)
+
+Route → Stop
+Route устахад Stop-ууд утгаараа устна → өөр Route-д бие даан орших утгагүй.
+
+Vehicle → GPSDevice
+GPS нь тухайн машинд “суулгагдсан” → Vehicle-гүйгээр утгагүй.
+
+Child → PickupTag
+Tag нь тухайн хүүхдэд зориулагдсан → хүүхэд устахад tag устна.
+----------------------------------------------------------------
+✅ Aggregation (сул холбоо)
+
+School → Route
+Route нь School-гүйгээр оршиж чадна → өөр сургуулиудтай давхцаж болно.
+
+Company → Vehicle (optional class)
+Машинууд company-гүйгээр ч оршиж чадна.
+
+Dispatcher → Vehicle
+Dispatcher зөвхөн ашиглана → эзэмшдэггүй.
+--------------------------------------------------------------------------
+✅ Association (ердийн холбоо)
+
+Driver ↔ Vehicle
+Driver сольж болно → runtime assignment.
+
+Parent ↔ Child
+Эцэг эх олон хүүхэдтэй байж болно.
+
+NotificationService ↔ Parent
+Service зөвхөн мэдэгдэл илгээнэ.
+
+Child ↔ Route (via Subscription)
+Many-to-many → завсрын класс.

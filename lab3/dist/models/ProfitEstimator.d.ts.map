@@ -1,0 +1,1 @@
+{"version":3,"file":"ProfitEstimator.d.ts","sourceRoot":"","sources":["../../src/models/ProfitEstimator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAGpC,qBAAa,eAAe;IACxB,MAAM,CAAC,cAAc,CACjB,aAAa,EAAE,SAAS,EAAE,EAC1B,mBAAmB,EAAE,MAAM,EAC3B,gBAAgB,EAAE,MAAM,GACzB,MAAM;CAQZ"}

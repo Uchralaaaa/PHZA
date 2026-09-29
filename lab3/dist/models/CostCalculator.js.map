@@ -1,0 +1,1 @@
+{"version":3,"file":"CostCalculator.js","sourceRoot":"","sources":["../../src/models/CostCalculator.ts"],"names":[],"mappings":"AACI,MAAM,OAAO,cAAc;IACvB,MAAM,CAAC,kBAAkB,CAAC,aAA0B;QAChD,IAAI,SAAS,GAAG,CAAC,CAAC;QAClB,aAAa,CAAC,OAAO,CAAC,SAAS,CAAC,EAAE;YAC9B,SAAS,IAAI,SAAS,CAAC,eAAe,EAAE,CAAC;QAC7C,CAAC,CAAC,CAAC;QACH,OAAO,SAAS,CAAC;IACrB,CAAC;CACJ"}

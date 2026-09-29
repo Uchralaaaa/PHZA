@@ -1,0 +1,1 @@
+{"version":3,"file":"CostCalculator.d.ts","sourceRoot":"","sources":["../../src/models/CostCalculator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AACpC,qBAAa,cAAc;IACvB,MAAM,CAAC,kBAAkB,CAAC,aAAa,EAAE,SAAS,EAAE,GAAG,MAAM;CAOhE"}

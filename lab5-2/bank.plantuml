@@ -1,0 +1,28 @@
+@startuml
+' Base class
+class Account {
+    - accountNumber: string
+    - owner: string
+    - balance: number
+    + deposit(amount: number): void
+    + withdraw(amount: number): void
+    + getAccountInfo(): void
+}
+
+' SavingsAccount class
+class SavingsAccount {
+    + withdraw(amount: number): void
+    + calculateInterest(rate: number): number
+}
+
+' CheckingAccount class
+class CheckingAccount {
+    - overdraftLimit: number
+    + withdraw(amount: number): void
+    + checkOverdraft(): void
+}
+
+' Inheritance
+Account <|-- SavingsAccount
+Account <|-- CheckingAccount
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+
+interface Engine {
+    +start(): void
+    +stop(): void
+}
+
+abstract class Vehicle {
+    -model: string
+    -color: string
+    -year: number
+    +printInfo(): void
+    +Nasjilt(currentYear: number): string
+}
+
+class ElectricCar {
+    +start(): void
+    +stop(): void
+}
+
+class GasCar {
+    +start(): void
+    +stop(): void
+}
+
+class Person {
+    -name: string
+    -car: Vehicle & Engine
+    +useCar(currentYear: number): void
+}
+
+' Насны харилцаа
+Vehicle <|-- ElectricCar
+Vehicle <|-- GasCar
+
+' Interface хэрэгжүүлэлт
+Engine <|.. ElectricCar
+Engine <|.. GasCar
+
+' Association
+Person --> Vehicle
+Person --> Engine
+
+@enduml

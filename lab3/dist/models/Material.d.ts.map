@@ -1,0 +1,1 @@
+{"version":3,"file":"Material.d.ts","sourceRoot":"","sources":["../../src/models/Material.ts"],"names":[],"mappings":"AAAA,qBAAa,QAAQ;IAEN,IAAI,EAAE,MAAM;IAChB,YAAY,EAAE,MAAM;IACpB,KAAK,EAAE,MAAM;IACb,MAAM,EAAE,MAAM;gBAHV,IAAI,EAAE,MAAM,EAChB,YAAY,EAAE,MAAM,EAAE,wBAAwB;IAC9C,KAAK,EAAE,MAAM,EAAE,mBAAmB;IAClC,MAAM,EAAE,MAAM;IAGrB,YAAY,IAAI,MAAM;CAGzB"}

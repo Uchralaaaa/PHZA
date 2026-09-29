@@ -1,0 +1,108 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+skinparam shadowing false
+
+title Child Transportation System
+
+class ParentGuardian {
+  - parentID: String
+  - name: String
+  - phone: String
+  - email: String
+}
+
+class Child {
+  - childID: String
+  - name: String
+  - age: int
+}
+
+class Schedule {
+  - day: String
+  - direction: String  // Morning / Evening
+}
+
+class Stop {
+  - stopID: String
+  - location: String
+}
+
+class Route {
+  - routeID: String
+}
+
+class Vehicle {
+  - vehicleID: String
+  - plateNumber: String
+}
+
+class Driver {
+  - driverID: String
+  - name: String
+}
+
+class Dispatcher {
+  - dispatcherID: String
+}
+
+class GPSDevice {
+  - deviceID: String
+}
+
+
+class School {
+  - schoolID: String
+  - name: String
+}
+
+class PickupTag {
+  - tagID: String
+  - type: String  // QR / NFC
+}
+
+class BoardingLog {
+  - time: DateTime
+  - status: String
+}
+
+' =========================
+' ASSOCIATIONS
+' =========================
+
+ParentGuardian "1" o-- "1..*" Child : manages
+
+Child "1" -- "1..*" Schedule : has
+
+Schedule "1" -- "1" Stop : pickup/dropoff
+
+Vehicle "1" -- "*" Driver : assigned
+
+Dispatcher "1" -- "0..*" Vehicle : manages
+
+
+' =========================
+' AGGREGATION
+' =========================
+
+Route "1" o-- "1..*" Stop : contains
+
+School "1" -- "0..*" Route : collaborates
+
+' =========================
+' COMPOSITION
+' =========================
+
+Vehicle "1" *-- "1" GPSDevice : has
+
+Child "1" *-- "1" PickupTag : owns
+
+PickupTag "1" *-- "0..*" BoardingLog : logs
+
+' =========================
+' MANY-TO-MANY
+' =========================
+
+Route "0..*" -- "0..*" Vehicle : assigned to
+
+@enduml

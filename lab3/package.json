@@ -1,0 +1,11 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

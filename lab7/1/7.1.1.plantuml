@@ -1,0 +1,73 @@
+@startuml
+
+' =====================
+' CLASS DEFINITIONS
+' =====================
+
+class Building {
+    name
+}
+
+class Zone {
+    name
+}
+
+class Room {
+    number
+}
+
+class Sensor {
+    type
+}
+
+class Camera {
+    id
+}
+
+class FireAlarm {
+    id
+}
+
+class CentralServer {
+    ip
+}
+
+class SecurityGuard {
+    name
+}
+
+class AlarmSystem {
+}
+
+class ServiceEngineer {
+    name
+}
+
+' =====================
+' COMPOSITION (♦)
+' =====================
+
+Building *-- Zone : contains
+Zone *-- Room : contains
+
+
+' =====================
+' AGGREGATION (◇)
+' =====================
+
+CentralServer o-- Sensor : monitors
+CentralServer o-- Camera : monitors
+Room o-- Sensor : has
+Room o-- Camera : has
+Room o-- FireAlarm : has
+
+' =====================
+' ASSOCIATION (—)
+' =====================
+
+SecurityGuard -- Zone : assigned to
+AlarmSystem -- SecurityGuard : sends alert
+ServiceEngineer -- Sensor : checks
+ServiceEngineer -- Camera : repairs
+
+@enduml
